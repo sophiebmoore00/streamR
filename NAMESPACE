@@ -2,6 +2,7 @@
 
 export("%>%")
 export(top_artists)
+export(top_songs)
 import(dplyr)
 import(purrr)
 import(rjson)

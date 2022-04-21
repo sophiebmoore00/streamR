@@ -1,4 +1,4 @@
-#' Finds Top Artist you listen to
+#' Find your most listened-to artists
 #'
 #' @param filepath JSON file
 #'
@@ -17,6 +17,31 @@ top_artists <- function(filepath, n = 5) {
   dat %>%
     group_by(artistName) %>%
     count(artistName) %>%
+    rename(count = n) %>%
+    arrange(desc(count)) %>%
+    head(n = n)
+
+}
+
+#' Find your most listened-to songs
+#'
+#' @param filepath JSON file
+#'
+#' @return A dataframe with top songs
+#'
+#' @import rjson
+#' @import purrr
+#' @import dplyr
+#'
+#' @export
+
+top_songs <- function(filepath, n = 5) {
+
+  dat <- convert_to_df(filepath)
+
+  dat %>%
+    group_by(artistName, trackName) %>%
+    count(trackName) %>%
     rename(count = n) %>%
     arrange(desc(count)) %>%
     head(n = n)
