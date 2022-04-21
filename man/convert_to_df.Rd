@@ -2,18 +2,16 @@
 % Please edit documentation in R/streaming_history.R
 \name{convert_to_df}
 \alias{convert_to_df}
-\title{Finds Top Artist you listen to
-Finds Top Artist you listen to}
+\title{Converts JSON file to a dataframe}
 \usage{
 convert_to_df(filepath)
 }
 \arguments{
-\item{filepath}{JSON file}
+\item{filepath}{The path to the json file}
 }
 \value{
-top playlists
+A dataframe
 }
 \description{
-Finds Top Artist you listen to
-Finds Top Artist you listen to
+Converts JSON file to a dataframe
 }
