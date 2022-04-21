@@ -1,11 +1,18 @@
 Package: streamR
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Analyzing User Spotify Data
 Version: 0.1.0
-Author: Who wrote it
+Author: Sophie, Cesar
 Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: This package takes user-inputted Spotify data files and provides functions to analyze them. 
+    Users can request their data from Spotify's website. 
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+Imports: 
+    magrittr
