@@ -1,4 +1,5 @@
 #' Finds Top Artist you listen to
+#' Finds Top Artist you listen to
 #'
 #' @param filepath JSON file
 #'
