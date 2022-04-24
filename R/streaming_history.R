@@ -1,6 +1,8 @@
 #' Find your most listened-to artists
 #'
 #' @param filepath JSON file
+#' @param dat a tidy data frame
+#' @param n the number of artists to return
 #'
 #' @return A dataframe with top artists
 #'
@@ -10,9 +12,17 @@
 #'
 #' @export
 
-top_artists <- function(filepath, n = 5) {
+top_artists <- function(filepath = NULL, dat = NULL, n = 5) {
 
-  dat <- convert_to_df(filepath)
+  if (is.null(filepath) && is.null(dat)){ #if neither a filepath nor df are supplied, stop
+
+    stop("Needs data file input.")
+
+  } else if (!is.null(filepath)) { #if there is a filepath, convert to a tbl
+
+    dat <- convert_to_df(filepath)
+
+  }
 
   dat %>%
     group_by(artistName) %>%
@@ -26,6 +36,8 @@ top_artists <- function(filepath, n = 5) {
 #' Find your most listened-to songs
 #'
 #' @param filepath JSON file
+#' @param dat a tidy data frame
+#' @param n the number of songs to return
 #'
 #' @return A dataframe with top songs
 #'
@@ -35,9 +47,17 @@ top_artists <- function(filepath, n = 5) {
 #'
 #' @export
 
-top_songs <- function(filepath, n = 5) {
+top_songs <- function(filepath = NULL, dat = NULL, n = 5) {
 
-  dat <- convert_to_df(filepath)
+  if (is.null(filepath) && is.null(dat)){ #if neither a filepath nor df are supplied, stop
+
+    stop("Needs data file input.")
+
+  } else if (!is.null(filepath)) { #if there is a filepath, convert to a tbl
+
+    dat <- convert_to_df(filepath)
+
+  }
 
   dat %>%
     group_by(artistName, trackName) %>%

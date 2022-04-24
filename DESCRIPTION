@@ -19,3 +19,5 @@ Imports:
     purrr,
     magrittr,
     rjson
+Depends: 
+    R (>= 2.10)
