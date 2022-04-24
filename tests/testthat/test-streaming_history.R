@@ -1,7 +1,19 @@
-test_that("multiplication works", {
-  expect_equal(2 * 2, 4)
+example_top_artists <- top_artists(test_path("StreamingHistory1.json"))
+usethis::use_data(example_top_artists, overwrite = TRUE)
+test_that("top artists works", {
+
+  res <- top_artists(test_path("StreamingHistory1.json"))
+
+  expect_equal(example_top_artists, res)
+
 })
 
-test_that("top artists works", {
-  expect_equal(top_artists("musicmusicmusic/StreamingHistory1.json"))
+example_top_songs <- top_songs(test_path("StreamingHistory1.json"))
+usethis::use_data(example_top_songs, overwrite = TRUE)
+test_that("top songs works", {
+
+  res <- top_songs(test_path("StreamingHistory1.json"))
+
+  expect_equal(example_top_songs, res)
+
 })
