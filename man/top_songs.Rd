@@ -4,10 +4,14 @@
 \alias{top_songs}
 \title{Find your most listened-to songs}
 \usage{
-top_songs(filepath, n = 5)
+top_songs(filepath = NULL, dat = NULL, n = 5)
 }
 \arguments{
 \item{filepath}{JSON file}
+
+\item{dat}{a tidy data frame}
+
+\item{n}{the number of songs to return}
 }
 \value{
 A dataframe with top songs
