@@ -1,8 +1,10 @@
 Package: streamR
 Title: Analyze User Spotify Data
 Version: 0.0.0.9000
-Authors@R: 
-    person("Sophie", "Moore", email = "smoore37@calpoly.edu", role = c("aut", "cre"))
+Authors@R:
+  c(person("Sophie", "Moore", email = "smoore37@calpoly.edu", role = c("aut", "cre")),
+    person("Cesar", "Nillaga", role = "aut"), 
+    person("Milo", "Weller", role = "aut"))
 Description: Allows users to input their personal Spotify data and provides multiple functions to easily analyze and visualize the data. 
 License: MIT + file LICENSE
 Encoding: UTF-8
