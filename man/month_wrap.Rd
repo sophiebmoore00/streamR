@@ -4,12 +4,12 @@
 \alias{month_wrap}
 \title{Creates a visualization for minutes played based on users input}
 \usage{
-month_wrap(df, dmonth)
+month_wrap(filepath = NULL, dat = NULL, dmonth)
 }
 \arguments{
-\item{df}{Manipulated dataframe}
-
 \item{dmonth}{string of month user would like to visualize, "01 - 12"}
+
+\item{df}{Manipulated dataframe}
 }
 \value{
 graph of minutes played for wanted month
@@ -18,7 +18,7 @@ graph of minutes played for wanted month
 Creates a visualization for minutes played based on users input
 }
 \examples{
-df <- month_detect(userdf)
+
 month_wrap(df, "05")
 
 }
