@@ -77,7 +77,8 @@ month_wrap <- function(filepath = NULL, dat=NULL, dmonth){
 #' @import dplyr
 #'@import tidyverse
 #' @import ggplot2
-#'@import ggridges
+#' @import ggridges
+#'
 #' @export
 
 year_wrap <- function(filepath = NULL, dat = NULL, n = 5) {
