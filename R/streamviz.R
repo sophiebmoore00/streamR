@@ -60,6 +60,7 @@ month_wrap <- function(df, dmonth){
 #'
 #' @import tidyverse
 #' @import ggplot2
+#' @import ggridges
 #'
 #' @export
 
