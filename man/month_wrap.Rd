@@ -19,6 +19,4 @@ Creates a visualization for minutes played based on users input
 }
 \examples{
 
-month_wrap(df, "05")
-
 }

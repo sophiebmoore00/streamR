@@ -2,7 +2,7 @@
 % Please edit documentation in R/streaming_history.R
 \name{top_artists}
 \alias{top_artists}
-\title{Find your most listened-to artists}
+\title{Find your most listened-to artists by number of streams}
 \usage{
 top_artists(filepath = NULL, dat = NULL, n = 5)
 }
@@ -17,5 +17,5 @@ top_artists(filepath = NULL, dat = NULL, n = 5)
 A dataframe with top artists
 }
 \description{
-Find your most listened-to artists
+Find your most listened-to artists by number of streams
 }

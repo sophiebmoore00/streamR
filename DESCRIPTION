@@ -14,11 +14,11 @@ Imports:
     dplyr,
     ggplot2,
     ggridges,
+    glue,
     magrittr,
     purrr,
     rjson,
-    stringr,
-    stringR
+    stringr
 Depends: 
     R (>= 2.10)
 LazyData: true
