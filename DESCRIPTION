@@ -18,7 +18,9 @@ Imports:
     magrittr,
     purrr,
     rjson,
-    stringr
+    stringr,
+    testthat,
+    usethis
 Depends: 
     R (>= 2.10)
 LazyData: true
