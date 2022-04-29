@@ -1,11 +1,9 @@
-#' Creates a visualization for minutes played based on users input
+#' Visualize your distribution of minutes listened for the month
 #'
 #' @param df Manipulated dataframe
 #' @param dmonth string of month user would like to visualize, "01 - 12"
 #'
-#' @examples
-#'
-#' @return graph of minutes played for wanted month
+#' @return graph of minutes played for selected month
 #'
 #' @import rjson
 #' @import purrr
@@ -36,17 +34,16 @@ month_wrap <- function(filepath = NULL, dat = NULL, dmonth){
 
 }
 
-#' Creates a visualization for minutes played for the entire year
+#' Visualize your distribution of minutes listened for the year
 #'
-#' @param filepath JSON file
+#' @param filepath path to a JSON file
 #' @param dat a tidy data frame
-#' @param n the number of artists to return
 #'
 #' @examples
 #' df <- month_detect(userdf)
 #' year_wrap(df)
 #'
-#' @return graph of minutes played for entire year
+#' @return graph of minutes played in the past year
 #'
 #' @import rjson
 #' @import purrr
@@ -57,7 +54,7 @@ month_wrap <- function(filepath = NULL, dat = NULL, dmonth){
 #'
 #' @export
 
-year_wrap <- function(filepath = NULL, dat = NULL, n = 5) {
+year_wrap <- function(filepath = NULL, dat = NULL) {
 
   if (is.null(filepath) && is.null(dat)){ #if neither a filepath nor df are supplied, stop
 
@@ -68,7 +65,6 @@ year_wrap <- function(filepath = NULL, dat = NULL, n = 5) {
     dat <- convert_to_df(filepath)
 
   }
-
 
   dat %>%
     ggplot(aes(x = {day}, y = {month}, fill = {minutes_played})) +    # df must be from spotify file no other manipulation needed
@@ -85,7 +81,7 @@ year_wrap <- function(filepath = NULL, dat = NULL, n = 5) {
 }
 
 
-#' Find your most listened-to artists by minutes listened
+#' Visualize your most listened-to artists by minutes listened
 #'
 #' @param filepath JSON file
 #' @param dat a tidy data frame
@@ -101,7 +97,8 @@ year_wrap <- function(filepath = NULL, dat = NULL, n = 5) {
 #'
 #' @export
 #'
-top_artists_time_graph <- function(filepath = NULL, dat = NULL, n = 5) {
+
+plot_top_artists <- function(filepath = NULL, dat = NULL, n = 5) {
 
   if (is.null(filepath) && is.null(dat)){ #if neither a filepath nor df are supplied, stop
 
@@ -123,6 +120,6 @@ top_artists_time_graph <- function(filepath = NULL, dat = NULL, n = 5) {
     geom_bar(stat = 'identity', fill = "steelblue")+
     labs(title = glue::glue("Time Spent Listening To Your {n} Favorite Artists"),
          x = "Artist", y = "Minutes")+
-    theme(axis.text.x = element_text(angle = 45,chjust = 1, vjust = 0.5))
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 }

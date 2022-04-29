@@ -2,7 +2,7 @@
 % Please edit documentation in R/streamviz.R
 \name{month_wrap}
 \alias{month_wrap}
-\title{Creates a visualization for minutes played based on users input}
+\title{Visualize your distribution of minutes listened for the month}
 \usage{
 month_wrap(filepath = NULL, dat = NULL, dmonth)
 }
@@ -12,11 +12,8 @@ month_wrap(filepath = NULL, dat = NULL, dmonth)
 \item{df}{Manipulated dataframe}
 }
 \value{
-graph of minutes played for wanted month
+graph of minutes played for selected month
 }
 \description{
-Creates a visualization for minutes played based on users input
-}
-\examples{
-
+Visualize your distribution of minutes listened for the month
 }
