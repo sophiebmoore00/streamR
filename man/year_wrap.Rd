@@ -2,22 +2,20 @@
 % Please edit documentation in R/streamviz.R
 \name{year_wrap}
 \alias{year_wrap}
-\title{Creates a visualization for minutes played for the entire year}
+\title{Visualize your distribution of minutes listened for the year}
 \usage{
-year_wrap(filepath = NULL, dat = NULL, n = 5)
+year_wrap(filepath = NULL, dat = NULL)
 }
 \arguments{
-\item{filepath}{JSON file}
+\item{filepath}{path to a JSON file}
 
 \item{dat}{a tidy data frame}
-
-\item{n}{the number of artists to return}
 }
 \value{
-graph of minutes played for entire year
+graph of minutes played in the past year
 }
 \description{
-Creates a visualization for minutes played for the entire year
+Visualize your distribution of minutes listened for the year
 }
 \examples{
 df <- month_detect(userdf)
